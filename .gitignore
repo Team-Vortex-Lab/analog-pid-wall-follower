@@ -1,0 +1,43 @@
+# ==========================================
+# LTspice Simulation Outputs
+# ==========================================
+*.raw
+*.log
+*.op.raw
+*.fft
+*.net
+
+# ==========================================
+# Altium Designer Temporary & Output Files
+# ==========================================
+History/
+Project Logs*/
+Project Outputs*/
+__History/
+*.PcbDoc.htm
+*.SchDoc.htm
+*.Annotation
+*.Constraint
+*.Dat
+*.CompileLog
+
+# ==========================================
+# SolidWorks Temporary & Cache Files
+# ==========================================
+~$*
+*.TMP
+*.tmp
+*.bak
+*.swp
+*.err
+*.$$$
+*.sldreg
+swxJnk*.html
+swxJnk*
+
+# ==========================================
+# OS Clutter
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
