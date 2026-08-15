@@ -1,19 +1,16 @@
 # 📑 Component Datasheets
 
-This directory contains reference documentation and specifications for all hardware components used in the Analog PID Wall-Following Robot.
+This directory contains reference documentation and specifications for hardware components used in the Analog PID Wall-Following Robot.
 
-👉 **[Team Cloud Datasheets Folder (Google Drive)](https://drive.google.com/drive/folders/1lMDGmva4uSAxD5tIkN_96Kx3obrL1pF3?usp=sharing)**
+👉 **[Master Datasheets Folder (Google Drive)](https://drive.google.com/drive/folders/1lMDGmva4uSAxD5tIkN_96Kx3obrL1pF3?usp=sharing)**
 
 ---
 
-## 🔗 Component Reference List
+## 🔗 Quick Reference Table
 
-All PDF datasheets are permanently backed up in our shared Google Drive folder to prevent link rot and keep the GitHub repository lightweight.
-
-| Component Category | Key Parts | Description | Google Drive Backup |
+| Component Category | Part Number | Description | Google Drive PDF Link |
 | :--- | :--- | :--- | :---: |
-| **Op-Amps & Control** | TL074 / LM358 | Signal conditioning & active PID loops | [Access PDFs](https://drive.google.com/drive/folders/1lMDGmva4uSAxD5tIkN_96Kx3obrL1pF3?usp=sharing) |
-| **Distance Sensors** | Sharp GP2Y0A51SK0F / IR | Wall proximity & distance feedback | [Access PDFs](https://drive.google.com/drive/folders/1lMDGmva4uSAxD5tIkN_96Kx3obrL1pF3?usp=sharing) |
-| **Power & Motors** | Regulators & MOSFET Drivers | Power rails & DC motor control stages | [Access PDFs](https://drive.google.com/drive/folders/1lMDGmva4uSAxD5tIkN_96Kx3obrL1pF3?usp=sharing) |
+| **Op-Amp** | TL084CN | Quad JFET-input Op-Amp for active PID control loops | [TL084CN Datasheet](https://drive.google.com/file/d/1j0n_mZHXLP2H53JF8jwdCQ7bG-zMXW96/view?usp=sharing) |
+| **Distance Sensor** | GP2Y0A51SK0F | Sharp analog distance measuring sensor | [GP2Y0A51SK0F Datasheet](https://drive.google.com/file/d/1KVFgSAvk5Yb8Bjvf4ChI5os2h5FNd3VK/view?usp=sharing) |
 
-> **Team Workflow Note:** Whenever a new component is integrated into the hardware design, upload its PDF datasheet to the Google Drive folder above before adding it to the schematic.
+> **Team Workflow Note:** Upload any new component PDF to the Master Google Drive folder first, then add its direct link to this table.
