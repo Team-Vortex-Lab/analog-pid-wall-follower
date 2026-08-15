@@ -3,6 +3,7 @@
 This directory contains reference documentation and specifications for hardware components used in the Analog PID Wall-Following Robot.
 
 👉 **[Master Datasheets Folder (Google Drive)](https://drive.google.com/drive/folders/1lMDGmva4uSAxD5tIkN_96Kx3obrL1pF3?usp=sharing)**
+📌 **[Pinout Diagrams (Google Drive)](https://drive.google.com/file/d/1u_uZ1QusOW3NFg6l6Y_Hem5C8aFe5rIm/view?usp=sharing)**
 
 ---
 
