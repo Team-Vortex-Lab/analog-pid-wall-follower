@@ -11,20 +11,20 @@ All primary mechanical components are modeled in **SolidWorks**. Files in this d
 | Path / File Type | Description |
 | :--- | :--- |
 | **`./` (Root)** | Native SolidWorks Part (`.SLDPRT`) and Assembly (`.SLDASM`) source files. |
+| **`./3d_print_parts/`** | 3D-printable **STL** (`.stl`) mesh files optimized for rapid prototyping via FDM/SLA additive manufacturing. |
 | **`./step/`** | Universal **STEP** (`.step` / `.stp`) format files for cross-CAD compatibility and CAM toolpaths. |
 | **`./previews/`** | High-resolution image renders (`.png` / `.jpg`) for quick visual review of parts without opening CAD software. |
-| **`*.stl`** | 3D-printable mesh files optimized for rapid prototyping via FDM/SLA additive manufacturing. |
 
 ---
 
 ## 🎯 Design Features & Specifications
 
 * **Custom Chassis Frame:** Optimized mounting interfaces for sensor arrays, motor drivers, and PCB hardware.
-* **Prototyping Ready:** Pre-configured STL files tuned for standard 3D printing tolerances.
+* **Prototyping Ready:** Pre-configured STL files tuned for standard 3D printing tolerances located in `./3d_print_parts/`.
 * **Neutral Formats:** Standardized STEP models provided for easy integration into secondary CAD environments.
 
 ---
 
 ## 🔒 Repository Hygiene
 
-> **Note for Contributors:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please ensure all updated parts are exported to both `./step/` and `./previews/` before pushing commits.
+> **Note for Contributors:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please ensure all updated parts are exported to `./3d_print_parts/`, `./step/`, and `./previews/` before pushing commits.
