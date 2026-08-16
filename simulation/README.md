@@ -1,9 +1,27 @@
-# Circuit Simulations
+# ⚡ Circuit Simulations (`.asc`)
 
-This directory contains circuit simulation files for the Analog PID Wall-Following Robot.
+This directory houses the LTspice schematic files and circuit models for the **Team Vortex Analog PID Robot** power, signal processing, and control hardware.
 
-* **Software:** Built and simulated using **LTspice**.
-* **Contents:** LTspice schematic files (`.asc`) for the sensor signal conditioning, Op-Amp PID control stages, and motor drivers.
-* **Waveforms:** Simulation waveform data (`.raw` files) is generated automatically when you run the schematic files in LTspice locally.
+---
 
-> **Note:** Only `.asc` schematics are tracked in Git. Waveform data files (`.raw`) are excluded by `.gitignore` to keep the repository lightweight.
+## 📌 Directory Contents & Scope
+
+* **Sensor Signal Conditioning:** Amplification, active filtering, and noise suppression circuits for raw IR distance sensor signals.
+* **Analog PID Controller:** Op-Amp-based Proportional, Integral, and Derivative analog processing stages for real-time error corrections.
+* **Motor Driver Interfaces:** H-bridge control stages, PWM generation, and power stage decoupling configurations.
+
+---
+
+## ⚙️ Simulation Guidelines
+
+* **Software:** Built and validated using **LTspice**.
+* **Primary Source Files:** Track only native schematic files (`.asc`) and custom symbol/component libraries (`.asy`, `.lib`, `.sub`).
+* **Repository Hygiene:** Log files (`.log`), raw waveform outputs (`.raw`), and netlists (`.net`) are excluded via `.gitignore` to prevent repository bloat.
+
+---
+
+## 🔒 Contributor Checklist
+
+1. Verify that schematics run clean simulations locally without unhandled transient errors before pushing updates.
+2. Label key node nets clearly (e.g., `V_ERR`, `PWM_OUT`, `PID_SUM`) to simplify peer review on schematic updates.
+3. Bundle any custom third-party Op-Amp or MOSFET SPICE models in the folder alongside their corresponding `.asc` file.
