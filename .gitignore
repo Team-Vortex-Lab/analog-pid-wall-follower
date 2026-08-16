@@ -38,6 +38,17 @@ swxJnk*
 # ==========================================
 # OS Clutter
 # ==========================================
+
+# Ignore raw data & log files inside the simulation folder
+simulation/*.raw
+simulation/*.dat
+simulation/*.log
+
+# Ignore image files inside the simulation folder
+simulation/*.png
+simulation/*.jpg
+simulation/*.jpeg
+
 .DS_Store
 Thumbs.db
 desktop.ini
