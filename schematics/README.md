@@ -1,11 +1,31 @@
-# Circuit Schematics & PCB Layouts
+# ⚡ Circuit Schematics & PCB Layouts
 
-This directory contains the complete electronic design and manufacturing files for the Analog PID Wall-Following Robot.
+Welcome to the hardware design repository for the **Team Vortex Analog PID Robot**. This directory houses the complete schematic design, printed circuit board (PCB) layout, and manufacturing outputs for our real-time, hardware-based analog PID control system.
 
-* **Software:** Designed using **Altium Designer**.
-* **Schematic Sheets:** `.SchDoc` files covering sensor signal conditioning, active Op-Amp PID control loops, and motor driver stages.
-* **PCB Layout:** `.PcbDoc` file containing component placement, layer stackup, power planes, and trace routing.
-* **Component Libraries:** Custom Altium schematic symbols (`.SchLib`) and PCB footprints (`.PcbLib`).
-* **JLCPCB Manufacturing Files:** Production-ready Gerber files, NC Drill data, and JLCPCB-compatible BOM & CPL (Component Placement List) files for PCB fabrication and SMT assembly.
+---
 
-> **Note:** Backup history folders (`History/`, `Project Logs/`) and temporary cache files are automatically ignored by `.gitignore` to maintain a clean repository.
+## 🛠️ EDA Toolchain & Design Files
+
+This project is built and maintained in **Altium Designer**. The project hierarchy is structured as follows:
+
+| Design File / Directory | Description |
+| :--- | :--- |
+| **`*.PrjPcb`** | Master Altium project container file. |
+| **`*.SchDoc`** | Hierarchical schematics covering sensor signal conditioning, active Op-Amp PID control loops, and H-bridge motor driver stages. |
+| **`*.PcbDoc`** | Multi-layer PCB layout featuring targeted ground planes, optimized power traces, and low-noise analog routing. |
+| **`Libraries/`** | Project-specific schematic symbols (`*.SchLib`) and PCB footprints (`*.PcbLib`). |
+| **`Outputs/`** | Production-ready Gerber files, NC Drill data, BOM, and CPL files configured for **JLCPCB SMT Assembly**. |
+
+---
+
+## 📋 Hardware Architecture Overview
+
+* **Sensor Signal Conditioning:** Filtering and scaling stage for continuous analog proximity sensing.
+* **Analog PID Controller:** Fully active operational amplifier circuit implementing parallel Proportional, Integral, and Derivative gain stages.
+* **Actuator Driver:** Dual H-bridge power stage for motor speed and direction control.
+
+---
+
+## 🔒 Repository Hygiene
+
+> **Note for Contributors:** Cache directories (`History/`, `__History/`), build logs (`*.CompileLog`), and workspace options are explicitly ignored via `.gitignore`. Please ensure all edits are saved to the primary project file (`*.PrjPcb`) before committing.
