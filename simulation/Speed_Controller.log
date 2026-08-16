@@ -1,0 +1,18 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\lenovo\Desktop\Analog Project\Circuit Simulation\Speed_Controller.net
+Start Time: Fri Aug 14 10:56:41 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 0.107 seconds.
+
+Files loaded:
+C:\Users\lenovo\Desktop\Analog Project\Circuit Simulation\Speed_Controller.net
+C:\Users\lenovo\AppData\Local\LTspice\lib\sub\UniversalOpAmp2.lib
+
