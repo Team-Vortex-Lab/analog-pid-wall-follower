@@ -1,10 +1,30 @@
-# 3D Mechanical CAD & Enclosure
+# 📐 3D Mechanical CAD & Chassis Assembly
 
-This directory contains the physical design files and 3D models for the Analog PID Wall-Following Robot chassis.
+Welcome to the mechanical design repository for the **Team Vortex Analog PID Robot**. This directory contains all source CAD models, printable export files, neutral exchange formats, and visual renders for the robot's physical structure and custom chassis.
 
-* **Software:** Designed and modeled using **SolidWorks**.
-* **STL Files:** 3D-printable `.stl` export files ready for FDM/SLA 3D printing and rapid prototyping.
-* **Component Previews:** Image previews (`.png` / `.jpg`) of individual CAD parts and assemblies for quick visual review directly on GitHub without opening CAD software.
+---
 
+## 🛠️ CAD Toolchain & Folder Structure
 
-> **Note:** Native SolidWorks temporary lock files (`~$*`) and backup logs are automatically excluded by `.gitignore`.
+All primary mechanical components are modeled in **SolidWorks**. Files in this directory are organized as follows:
+
+| Path / File Type | Description |
+| :--- | :--- |
+| **`./` (Root)** | Native SolidWorks Part (`.SLDPRT`) and Assembly (`.SLDASM`) source files. |
+| **`./3d_print_parts/`** | 3D-printable **STL** (`.stl`) mesh files optimized for rapid prototyping via FDM/SLA additive manufacturing. |
+| **`./step/`** | Universal **STEP** (`.step` / `.stp`) format files for cross-CAD compatibility and CAM toolpaths. |
+| **`./previews/`** | High-resolution image renders (`.png` / `.jpg`) for quick visual review of parts without opening CAD software. |
+
+---
+
+## 🎯 Design Features & Specifications
+
+* **Custom Chassis Frame:** Optimized mounting interfaces for sensor arrays, motor drivers, and PCB hardware.
+* **Prototyping Ready:** Pre-configured STL files tuned for standard 3D printing tolerances located in `./3d_print_parts/`.
+* **Neutral Formats:** Standardized STEP models provided for easy integration into secondary CAD environments.
+
+---
+
+## 🔒 Repository Hygiene
+
+> **Note for Contributors:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please ensure all updated parts are exported to `./3d_print_parts/`, `./step/`, and `./previews/` before pushing commits.
