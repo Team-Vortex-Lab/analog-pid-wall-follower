@@ -1,0 +1,22 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -288 -72 288 72
+WINDOW 0 0 -72 Bottom 2
+PIN -288 -48 LEFT 8
+PINATTR PinName +5V
+PINATTR SpiceOrder 1
+PIN -288 -16 LEFT 8
+PINATTR PinName -5V
+PINATTR SpiceOrder 2
+PIN -288 16 LEFT 8
+PINATTR PinName Control_Signal
+PINATTR SpiceOrder 3
+PIN -288 48 LEFT 8
+PINATTR PinName SPEED_Control_potentiometer
+PINATTR SpiceOrder 4
+PIN 288 -16 RIGHT 8
+PINATTR PinName SPEED_L
+PINATTR SpiceOrder 5
+PIN 288 16 RIGHT 8
+PINATTR PinName SPEED_R
+PINATTR SpiceOrder 6
