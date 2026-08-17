@@ -33,11 +33,16 @@ Please review the primary design assets and reference materials before starting 
 * **Reference Model Diagram:** [View CAD Reference Model](https://drive.google.com/file/d/1-P2Z6PWNmvsWfch-ZRc7PMqoGPqI8Aun/view?usp=sharing)
 * **Component Measurement Specifications:** [View Component Measurements](https://drive.google.com/file/d/1M3fZRFy8i3cnOhA6xqmA4AMep1WubyNB/view?usp=sharing)
 
-### 📐 Mechanical & Modeling Guidelines
+### 📐 Mechanical & Dimensional Guidelines
 1. **PCB Shape Flexibility:** The PCB outline shown in the reference design diagram is **strictly a reference layout**. You have full freedom to modify or redesign the PCB shape as needed to optimize the overall chassis geometry.
-2. **PCB Board Sheet Thickness:** Please model the PCB using a standard **1.6 mm sheet thickness** in your 3D assembly to ensure accurate vertical stack-up and component clearance checks.
-3. **Required Exports:** Whenever you finish or update a model, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
-4. **Units & Tolerances:** Ensure all models are designed in **millimeters (mm)** with a minimum printing tolerance of **0.2 mm – 0.4 mm** for mating surfaces, mounts, and screw holes.
+2. **PCB Board Sheet Thickness:** Model the PCB using a standard **1.6 mm sheet thickness** in your 3D assembly for accurate stack-up checks.
+3. **Chassis Width:** Design the chassis / PCB width to be approximately **9 cm (90 mm)**.
+4. **Ground Clearance:** Maintain a fixed **5 mm ground clearance** between the bottom-most part of the chassis/PCB and the floor surface.
+5. **Component Space Allocation:** Account for high component density on the board—the analog signal chain requires spatial clearance for **7 Op-Amps** and **6 Potentiometers** alongside standard routing and connectors.
+
+### 📦 Workflow Requirements
+* **Required Exports:** Whenever you finish or update a model, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
+* **Units & Tolerances:** Ensure all models are designed in **millimeters (mm)** with standard printing tolerances (**0.2 mm – 0.4 mm**) for mating surfaces and mounting hardware.
 
 ---
 
