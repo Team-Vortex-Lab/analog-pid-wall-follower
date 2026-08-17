@@ -25,6 +25,16 @@ All primary mechanical components are modeled in **SolidWorks**. Files in this d
 
 ---
 
+## 👷 Message for 3D Designers & Contributors
+
+If you are working on the 3D parts, please follow these workflow guidelines before submitting changes:
+
+1. **Required Exports:** Whenever you update or finish a part, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
+2. **Units & Tolerances:** Ensure models are designed in **millimeters (mm)** with a minimum printing tolerance of **0.2 mm – 0.4 mm** for mating parts and mounting holes.
+3. **Clearance Check:** Keep adequate clearance for PCB components (capacitors, connectors, and heatsinks) to prevent assembly collisions.
+
+---
+
 ## 🔒 Repository Hygiene
 
-> **Note for Contributors:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please ensure all updated parts are exported to `./3d_print_parts/`, `./step/`, and `./previews/` before pushing commits.
+> **Note:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please verify all STEP and STL files are updated in their respective subfolders before pushing your branch.
