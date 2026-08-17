@@ -27,11 +27,17 @@ All primary mechanical components are modeled in **SolidWorks**. Files in this d
 
 ## 👷 Message for 3D Designers & Contributors
 
-If you are working on the 3D parts, please follow these workflow guidelines before submitting changes:
+Please review the primary design assets and reference materials before starting assembly or modeling:
 
-1. **Required Exports:** Whenever you update or finish a part, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
-2. **Units & Tolerances:** Ensure models are designed in **millimeters (mm)** with a minimum printing tolerance of **0.2 mm – 0.4 mm** for mating parts and mounting holes.
-3. **Clearance Check:** Keep adequate clearance for PCB components (capacitors, connectors, and heatsinks) to prevent assembly collisions.
+### 📌 Reference Materials & Links
+* **Reference Model Diagram:** [View CAD Reference Model](https://drive.google.com/file/d/1-P2Z6PWNmvsWfch-ZRc7PMqoGPqI8Aun/view?usp=sharing)
+* **Component Measurement Specifications:** [View Component Measurements](https://drive.google.com/file/d/1M3fZRFy8i3cnOhA6xqmA4AMep1WubyNB/view?usp=sharing)
+
+### 📐 Mechanical & Modeling Guidelines
+1. **PCB Shape Flexibility:** The PCB outline shown in the reference design diagram is **strictly a reference layout**. You have full freedom to modify or redesign the PCB shape as needed to optimize the overall chassis geometry.
+2. **PCB Board Sheet Thickness:** Please model the PCB using a standard **1.6 mm sheet thickness** in your 3D assembly to ensure accurate vertical stack-up and component clearance checks.
+3. **Required Exports:** Whenever you finish or update a model, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
+4. **Units & Tolerances:** Ensure all models are designed in **millimeters (mm)** with a minimum printing tolerance of **0.2 mm – 0.4 mm** for mating surfaces, mounts, and screw holes.
 
 ---
 
