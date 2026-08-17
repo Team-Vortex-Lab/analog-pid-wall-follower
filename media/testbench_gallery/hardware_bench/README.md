@@ -1,7 +1,7 @@
-# 📉 Oscilloscope Waveform Gallery
+# 🛠️ Hardware Bench Gallery
 
-Raw oscilloscope screen captures and signal trace records from physical testbench debugging.
+Physical testbed setup photos, PCB component integration, and breadboard circuit debugging records.
 
-* **Day 1:** Triangular carrier wave generation and basic PWM signals.
-* **Day 2:** Multi-channel clustered PWM duty cycle modulation (0% - 100%).
-* **Day 3:** Live Sharp IR sensor distance voltages vs. dynamic differential PWM outputs.
+* **Day 1:** Op-amp circuit breadboarding, power supply wiring, and signal generator connections.
+* **Day 2:** Multi-stage PWM driver assembly, potentiometer tuning, and wiring harness setup.
+* **Day 3:** Dual Sharp IR sensor physical mounting, chassis integration, and motor driver bench testing.
