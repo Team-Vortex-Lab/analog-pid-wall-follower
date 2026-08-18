@@ -1,0 +1,19 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal 224 80 -224 -80
+WINDOW 0 0 -80 Bottom 2
+PIN -160 -80 TOP 8
+PINATTR PinName +5V
+PINATTR SpiceOrder 1
+PIN 160 -80 TOP 8
+PINATTR PinName -5V
+PINATTR SpiceOrder 2
+PIN -224 0 LEFT 8
+PINATTR PinName Distance_Error
+PINATTR SpiceOrder 3
+PIN 0 80 BOTTOM 8
+PINATTR PinName Ref_0
+PINATTR SpiceOrder 4
+PIN 224 0 RIGHT 8
+PINATTR PinName Control_Signal
+PINATTR SpiceOrder 5
