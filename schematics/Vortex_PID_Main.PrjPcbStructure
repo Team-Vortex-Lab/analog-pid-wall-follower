@@ -1,4 +1,5 @@
 Record=TopLevelDocument|FileName=Differential_Drive_Mixer.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Differential_Drive_Mixer.SchDoc|FileName=Front Obstacle Brake.SchDoc|SheetNumber=7
 Record=NoMainPathDocument|SourceDocument=Differential_Drive_Mixer.SchDoc|FileName=Mosfet_HBridge_Driver.SchDoc|SheetNumber=4
 Record=NoMainPathDocument|SourceDocument=Differential_Drive_Mixer.SchDoc|FileName=PID_Controller.SchDoc|SheetNumber=6
 Record=NoMainPathDocument|SourceDocument=Differential_Drive_Mixer.SchDoc|FileName=Power_Management.SchDoc|SheetNumber=5
