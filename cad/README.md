@@ -1,51 +1,47 @@
-# 📐 3D Mechanical CAD & Chassis Assembly
+# CAD Models & Mechanical Assembly
 
-Welcome to the mechanical design repository for the **Team Vortex Analog PID Robot**. This directory contains all source CAD models, printable export files, neutral exchange formats, and visual renders for the robot's physical structure and custom chassis.
-
----
-
-## 🛠️ CAD Toolchain & Folder Structure
-
-All primary mechanical components are modeled in **SolidWorks**. Files in this directory are organized as follows:
-
-| Path / File Type | Description |
-| :--- | :--- |
-| **`./` (Root)** | Native SolidWorks Part (`.SLDPRT`) and Assembly (`.SLDASM`) source files. |
-| **`./3d_print_parts/`** | 3D-printable **STL** (`.stl`) mesh files optimized for rapid prototyping via FDM/SLA additive manufacturing. |
-| **`./step/`** | Universal **STEP** (`.step` / `.stp`) format files for cross-CAD compatibility and CAM toolpaths. |
-| **`./previews/`** | High-resolution image renders (`.png` / `.jpg`) for quick visual review of parts without opening CAD software. |
+This directory contains the 3D CAD files and mechanical assembly designs for the robot chassis. The design utilizes a integrated PCB-as-chassis architecture, custom 3D-printed mounting hardware, and an auxiliary acrylic support plate for structural stability and ground clearance adjustment.
 
 ---
 
-## 🎯 Design Features & Specifications
+## 1. Chassis Overview (Top & Bottom Views)
 
-* **Custom Chassis Frame:** Optimized mounting interfaces for sensor arrays, motor drivers, and PCB hardware.
-* **Prototyping Ready:** Pre-configured STL files tuned for standard 3D printing tolerances located in `./3d_print_parts/`.
-* **Neutral Formats:** Standardized STEP models provided for easy integration into secondary CAD environments.
+![Top and Bottom Views](previews/Top%20and%20Bottom%20Views.png)
 
----
-
-## 👷 Message for 3D Designers & Contributors
-
-Please review the primary design assets and reference materials before starting assembly or modeling:
-
-### 📌 Reference Materials & Links
-* **Reference Model Diagram:** [View CAD Reference Model](https://drive.google.com/file/d/1-P2Z6PWNmvsWfch-ZRc7PMqoGPqI8Aun/view?usp=sharing)
-* **Component Measurement Specifications:** [View Component Measurements](https://drive.google.com/file/d/1M3fZRFy8i3cnOhA6xqmA4AMep1WubyNB/view?usp=sharing)
-
-### 📐 Mechanical & Dimensional Guidelines
-1. **PCB Shape Flexibility:** The PCB outline shown in the reference design diagram is **strictly a reference layout**. You have full freedom to modify or redesign the PCB shape as needed to optimize the overall chassis geometry.
-2. **PCB Board Sheet Thickness:** Model the PCB using a standard **1.6 mm sheet thickness** in your 3D assembly for accurate stack-up checks.
-3. **Chassis Width:** Design the chassis / PCB width to be approximately **9 cm (90 mm)**.
-4. **Ground Clearance:** Maintain a fixed **5 mm ground clearance** between the bottom-most part of the chassis/PCB and the floor surface.
-5. **Component Space Allocation:** Account for high component density on the board—the analog signal chain requires spatial clearance for **7 Op-Amps** and **6 Potentiometers** alongside standard routing and connectors.
-
-### 📦 Workflow Requirements
-* **Required Exports:** Whenever you finish or update a model, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
-* **Units & Tolerances:** Ensure all models are designed in **millimeters (mm)** with standard printing tolerances (**0.2 mm – 0.4 mm**) for mating surfaces and mounting hardware.
+### Key Features
+* **PCB Chassis Integration:** The primary PCB serves double duty as both the structural base and main circuit carrier, reducing overall weight and footprint.
+* **3D Printed Mounts:** Custom 3D-printed components house the distance sensors and secure the motors firmly to the chassis.
+* **Modular Mounts:** Designed for easy disassembly and adjustment during mechanical testing.
 
 ---
 
-## 🔒 Repository Hygiene
+## 2. Key Dimensions & Sensor Alignment
 
-> **Note:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please verify all STEP and STL files are updated in their respective subfolders before pushing your branch.
+![Measurements](previews/Measurements.png)
+
+### Specifications
+* **Width:** 90 mm
+* **Height:** 110 mm
+* **Ground Clearance:** 3 mm
+* **Sensor Orientation:** 
+  * **Front Sensors (×2):** Angled forward to detect upcoming obstacles/walls.
+  * **Side Sensors (×2):** Offset at a **15° angle** relative to the sides for accurate side-wall distance measurement and centering.
+
+---
+
+## 3. Acrylic Structural Support & Motor Mounting
+
+![With Acrylic Support](previews/With%20Acralic.png)
+
+### Mechanical Structure
+* **Elevated Acrylic Plate:** Mounted **5 mm above the main PCB** to serve as the structural backbone of the assembly.
+* **Motor Mounting System:** Motors attach directly to the acrylic sheet, allowing precise tuning of the 3 mm ground clearance.
+* **Battery Support:** Serves as the primary secure mounting tray for the battery power supply.
+
+---
+
+## 4. Final Assembled CAD View
+
+![Final Assembly View](previews/WFinal_assembly.png)
+
+*Complete 3D model view showcasing the populated PCB with all mounted electronic components, 3D-printed clips, sensors, and structural acrylic elements.*
