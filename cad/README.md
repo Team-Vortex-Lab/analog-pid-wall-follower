@@ -1,51 +1,74 @@
-# 📐 3D Mechanical CAD & Chassis Assembly
+<div align="center">
 
-Welcome to the mechanical design repository for the **Team Vortex Analog PID Robot**. This directory contains all source CAD models, printable export files, neutral exchange formats, and visual renders for the robot's physical structure and custom chassis.
+# 🛠️ Mechanical & CAD Assembly
 
----
-
-## 🛠️ CAD Toolchain & Folder Structure
-
-All primary mechanical components are modeled in **SolidWorks**. Files in this directory are organized as follows:
-
-| Path / File Type | Description |
-| :--- | :--- |
-| **`./` (Root)** | Native SolidWorks Part (`.SLDPRT`) and Assembly (`.SLDASM`) source files. |
-| **`./3d_print_parts/`** | 3D-printable **STL** (`.stl`) mesh files optimized for rapid prototyping via FDM/SLA additive manufacturing. |
-| **`./step/`** | Universal **STEP** (`.step` / `.stp`) format files for cross-CAD compatibility and CAM toolpaths. |
-| **`./previews/`** | High-resolution image renders (`.png` / `.jpg`) for quick visual review of parts without opening CAD software. |
+**Integrated PCB Chassis Architecture • Custom 3D Printed Hardware • Multi-Layer Support**
 
 ---
 
-## 🎯 Design Features & Specifications
+</div>
 
-* **Custom Chassis Frame:** Optimized mounting interfaces for sensor arrays, motor drivers, and PCB hardware.
-* **Prototyping Ready:** Pre-configured STL files tuned for standard 3D printing tolerances located in `./3d_print_parts/`.
-* **Neutral Formats:** Standardized STEP models provided for easy integration into secondary CAD environments.
+This directory contains the complete 3D CAD design files, mechanical assemblies, and structural layouts for the Micromouse robot chassis. The design leverages a **PCB-as-chassis** approach, paired with custom 3D-printed mounting brackets and an elevated acrylic backbone for weight optimization, low center of gravity, and modular repairability.
 
 ---
 
-## 👷 Message for 3D Designers & Contributors
+## 1. Chassis Overview (Top & Bottom Views)
 
-Please review the primary design assets and reference materials before starting assembly or modeling:
+<div align="center">
+  <img src="previews/Top%20and%20Bottom%20Views.png" alt="Top and Bottom Views" width="600" style="border-radius: 8px;" />
+</div>
 
-### 📌 Reference Materials & Links
-* **Reference Model Diagram:** [View CAD Reference Model](https://drive.google.com/file/d/1-P2Z6PWNmvsWfch-ZRc7PMqoGPqI8Aun/view?usp=sharing)
-* **Component Measurement Specifications:** [View Component Measurements](https://drive.google.com/file/d/1M3fZRFy8i3cnOhA6xqmA4AMep1WubyNB/view?usp=sharing)
-
-### 📐 Mechanical & Dimensional Guidelines
-1. **PCB Shape Flexibility:** The PCB outline shown in the reference design diagram is **strictly a reference layout**. You have full freedom to modify or redesign the PCB shape as needed to optimize the overall chassis geometry.
-2. **PCB Board Sheet Thickness:** Model the PCB using a standard **1.6 mm sheet thickness** in your 3D assembly for accurate stack-up checks.
-3. **Chassis Width:** Design the chassis / PCB width to be approximately **9 cm (90 mm)**.
-4. **Ground Clearance:** Maintain a fixed **5 mm ground clearance** between the bottom-most part of the chassis/PCB and the floor surface.
-5. **Component Space Allocation:** Account for high component density on the board—the analog signal chain requires spatial clearance for **7 Op-Amps** and **6 Potentiometers** alongside standard routing and connectors.
-
-### 📦 Workflow Requirements
-* **Required Exports:** Whenever you finish or update a model, always export and update the corresponding files in **`./3d_print_parts/`** (`.stl`), **`./step/`** (`.step`), and **`./previews/`** (`.png`/`.jpg`).
-* **Units & Tolerances:** Ensure all models are designed in **millimeters (mm)** with standard printing tolerances (**0.2 mm – 0.4 mm**) for mating surfaces and mounting hardware.
+### 🔍 Key Features
+* 🟩 **PCB Chassis Integration:** The primary PCB serves double-duty as both the main structural frame and circuit substrate, reducing unnecessary weight and maintaining a tight footprint.
+* 🖨️ **3D-Printed Mounts:** Custom brackets house the optical distance sensors and secure the drive motors firmly to the chassis.
+* 🔧 **Modular Construction:** Fastener locations are designed for fast disassembly and rapid hardware iteration during testing.
 
 ---
 
-## 🔒 Repository Hygiene
+## 2. Technical Dimensions & Sensor Alignment
 
-> **Note:** Native SolidWorks temporary lock files (`~$*`), crash logs, and local backup files are automatically filtered out via `.gitignore`. Please verify all STEP and STL files are updated in their respective subfolders before pushing your branch.
+<div align="center">
+  <img src="previews/Measurements.png" alt="Measurements" width="600" style="border-radius: 8px;" />
+</div>
+
+### 📐 Physical Specifications & Layout
+
+| Parameter | Specification | Notes / Purpose |
+| :--- | :--- | :--- |
+| **Width** | `90 mm` | Compact width for narrow maze clearance |
+| **Height** | `110 mm` | Total front-to-back chassis footprint |
+| **Ground Clearance** | `3 mm` | Optimized center of gravity |
+| **Front Sensors (×2)** | `Forward-facing` | Detects front wall proximity |
+| **Side Sensors (×2)** | `15° Offset Angle` | Angled relative to side walls for dynamic centering |
+
+---
+
+## 3. Structural Acrylic Backbone & Motor Assembly
+
+<div align="center">
+  <img src="previews/With%20Acralic.png" alt="With Acrylic Support" width="600" style="border-radius: 8px;" />
+</div>
+
+### 🛡️ Mechanical Layering
+* 🟦 **Elevated Acrylic Plate:** Positioned **5 mm above the primary PCB**, acting as the main rigid structural spine.
+* ⚙️ **Motor Mounting System:** Drive motors mount directly to the acrylic layer, ensuring strict maintenance of the **3 mm ground clearance**.
+* 🔋 **Battery Housing:** The acrylic upper deck provides a stable, isolated mounting surface for the power supply.
+
+---
+
+## 4. Fully Populated Final Assembly
+
+<div align="center">
+  <img src="previews/WFinal_assembly.png" alt="Final Assembly View" width="600" style="border-radius: 8px;" />
+  <p><i>Complete 3D CAD view showing the populated PCB, mounted sensors, 3D-printed motor clips, and upper acrylic deck.</i></p>
+</div>
+
+---
+
+<div align="center">
+
+| CAD Environment | Primary Material | Sensor Count |
+| :---: | :---: | :---: |
+| SolidWorks / Fusion 360 | FR4 (PCB) + Acrylic + PLA | 4× Distance Sensors |
+
+</div>
