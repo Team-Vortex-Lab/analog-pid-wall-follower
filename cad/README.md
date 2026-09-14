@@ -1,47 +1,74 @@
-# CAD Models & Mechanical Assembly
+<div align="center">
 
-This directory contains the 3D CAD files and mechanical assembly designs for the robot chassis. The design utilizes a integrated PCB-as-chassis architecture, custom 3D-printed mounting hardware, and an auxiliary acrylic support plate for structural stability and ground clearance adjustment.
+# 🛠️ Mechanical & CAD Assembly
+
+**Integrated PCB Chassis Architecture • Custom 3D Printed Hardware • Multi-Layer Support**
+
+---
+
+</div>
+
+This directory contains the complete 3D CAD design files, mechanical assemblies, and structural layouts for the Micromouse robot chassis. The design leverages a **PCB-as-chassis** approach, paired with custom 3D-printed mounting brackets and an elevated acrylic backbone for weight optimization, low center of gravity, and modular repairability.
 
 ---
 
 ## 1. Chassis Overview (Top & Bottom Views)
 
-![Top and Bottom Views](previews/Top%20and%20Bottom%20Views.png)
+<div align="center">
+  <img src="previews/Top%20and%20Bottom%20Views.png" alt="Top and Bottom Views" width="600" style="border-radius: 8px;" />
+</div>
 
-### Key Features
-* **PCB Chassis Integration:** The primary PCB serves double duty as both the structural base and main circuit carrier, reducing overall weight and footprint.
-* **3D Printed Mounts:** Custom 3D-printed components house the distance sensors and secure the motors firmly to the chassis.
-* **Modular Mounts:** Designed for easy disassembly and adjustment during mechanical testing.
-
----
-
-## 2. Key Dimensions & Sensor Alignment
-
-![Measurements](previews/Measurements.png)
-
-### Specifications
-* **Width:** 90 mm
-* **Height:** 110 mm
-* **Ground Clearance:** 3 mm
-* **Sensor Orientation:** 
-  * **Front Sensors (×2):** Angled forward to detect upcoming obstacles/walls.
-  * **Side Sensors (×2):** Offset at a **15° angle** relative to the sides for accurate side-wall distance measurement and centering.
+### 🔍 Key Features
+* 🟩 **PCB Chassis Integration:** The primary PCB serves double-duty as both the main structural frame and circuit substrate, reducing unnecessary weight and maintaining a tight footprint.
+* 🖨️ **3D-Printed Mounts:** Custom brackets house the optical distance sensors and secure the drive motors firmly to the chassis.
+* 🔧 **Modular Construction:** Fastener locations are designed for fast disassembly and rapid hardware iteration during testing.
 
 ---
 
-## 3. Acrylic Structural Support & Motor Mounting
+## 2. Technical Dimensions & Sensor Alignment
 
-![With Acrylic Support](previews/With%20Acralic.png)
+<div align="center">
+  <img src="previews/Measurements.png" alt="Measurements" width="600" style="border-radius: 8px;" />
+</div>
 
-### Mechanical Structure
-* **Elevated Acrylic Plate:** Mounted **5 mm above the main PCB** to serve as the structural backbone of the assembly.
-* **Motor Mounting System:** Motors attach directly to the acrylic sheet, allowing precise tuning of the 3 mm ground clearance.
-* **Battery Support:** Serves as the primary secure mounting tray for the battery power supply.
+### 📐 Physical Specifications & Layout
+
+| Parameter | Specification | Notes / Purpose |
+| :--- | :--- | :--- |
+| **Width** | `90 mm` | Compact width for narrow maze clearance |
+| **Height** | `110 mm` | Total front-to-back chassis footprint |
+| **Ground Clearance** | `3 mm` | Optimized center of gravity |
+| **Front Sensors (×2)** | `Forward-facing` | Detects front wall proximity |
+| **Side Sensors (×2)** | `15° Offset Angle` | Angled relative to side walls for dynamic centering |
 
 ---
 
-## 4. Final Assembled CAD View
+## 3. Structural Acrylic Backbone & Motor Assembly
 
-![Final Assembly View](previews/WFinal_assembly.png)
+<div align="center">
+  <img src="previews/With%20Acralic.png" alt="With Acrylic Support" width="600" style="border-radius: 8px;" />
+</div>
 
-*Complete 3D model view showcasing the populated PCB with all mounted electronic components, 3D-printed clips, sensors, and structural acrylic elements.*
+### 🛡️ Mechanical Layering
+* 🟦 **Elevated Acrylic Plate:** Positioned **5 mm above the primary PCB**, acting as the main rigid structural spine.
+* ⚙️ **Motor Mounting System:** Drive motors mount directly to the acrylic layer, ensuring strict maintenance of the **3 mm ground clearance**.
+* 🔋 **Battery Housing:** The acrylic upper deck provides a stable, isolated mounting surface for the power supply.
+
+---
+
+## 4. Fully Populated Final Assembly
+
+<div align="center">
+  <img src="previews/WFinal_assembly.png" alt="Final Assembly View" width="600" style="border-radius: 8px;" />
+  <p><i>Complete 3D CAD view showing the populated PCB, mounted sensors, 3D-printed motor clips, and upper acrylic deck.</i></p>
+</div>
+
+---
+
+<div align="center">
+
+| CAD Environment | Primary Material | Sensor Count |
+| :---: | :---: | :---: |
+| SolidWorks / Fusion 360 | FR4 (PCB) + Acrylic + PLA | 4× Distance Sensors |
+
+</div>
