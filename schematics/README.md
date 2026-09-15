@@ -1,31 +1,62 @@
-# ⚡ Circuit Schematics & PCB Layouts
+<div align="center">
 
-Welcome to the hardware design repository for the **Team Vortex Analog PID Robot**. This directory houses the complete schematic design, printed circuit board (PCB) layout, and manufacturing outputs for our real-time, hardware-based analog PID control system.
+# ⚡ PCB Layout & Copper Pour Documentation
 
----
-
-## 🛠️ EDA Toolchain & Design Files
-
-This project is built and maintained in **Altium Designer**. The project hierarchy is structured as follows:
-
-| Design File / Directory | Description |
-| :--- | :--- |
-| **`*.PrjPcb`** | Master Altium project container file. |
-| **`*.SchDoc`** | Hierarchical schematics covering sensor signal conditioning, active Op-Amp PID control loops, and H-bridge motor driver stages. |
-| **`*.PcbDoc`** | Multi-layer PCB layout featuring targeted ground planes, optimized power traces, and low-noise analog routing. |
-| **`Libraries/`** | Project-specific schematic symbols (`*.SchLib`) and PCB footprints (`*.PcbLib`). |
-| **`Outputs/`** | Production-ready Gerber files, NC Drill data, BOM, and CPL files configured for **JLCPCB SMT Assembly**. |
+**Optimized Component Placement • Multi-Rail Power Planes • Low-Noise Grounding**
 
 ---
 
-## 📋 Hardware Architecture Overview
+</div>
 
-* **Sensor Signal Conditioning:** Filtering and scaling stage for continuous analog proximity sensing.
-* **Analog PID Controller:** Fully active operational amplifier circuit implementing parallel Proportional, Integral, and Derivative gain stages.
-* **Actuator Driver:** Dual H-bridge power stage for motor speed and direction control.
+This directory contains the layout assets, preview images, and structural PCB design files for the controller board. The layout focuses on signal integrity, minimized trace lengths, noise isolation, and efficient power distribution across multi-layered copper pours.
 
 ---
 
-## 🔒 Repository Hygiene
+## 1. Component Placement & Floorplanning
 
-> **Note for Contributors:** Cache directories (`History/`, `__History/`), build logs (`*.CompileLog`), and workspace options are explicitly ignored via `.gitignore`. Please ensure all edits are saved to the primary project file (`*.PrjPcb`) before committing.
+<div align="center">
+  <img src="Images_preview/Placements.png" alt="Component Placements" width="600" style="border-radius: 8px;" />
+</div>
+
+### 🔍 Placement Highlights
+* 🔀 **Routing-Optimized Layout:** Components are strategically aligned to keep signal paths short, minimizing cross-coupling and routing complexity.
+* 🛡️ **Signal Integrity:** Sensitive analog signal paths and high-frequency digital traces are isolated to prevent cross-talk and switching noise interference.
+* 🧩 **Modular Functional Blocks:** Power management, MCU signals, and sensor interfaces are grouped into dedicated functional zones for clear signal flow.
+
+---
+
+## 2. Top Layer Ground Pour (Top Copper)
+
+<div align="center">
+  <img src="Images_preview/top_pour.png" alt="Top Copper Ground Pour" width="600" style="border-radius: 8px;" />
+</div>
+
+### ⚡ Top Layer Features
+* 🟩 **Continuous Ground Plane (GND):** Serves as a low-impedance return path for high-speed signals and sensor inputs.
+* 🌡️ **Thermal Management:** Provides high surface area copper pour for efficient heat dissipation from power components and drivers.
+* 📉 **EMI Reduction:** Continuous ground shielding dampens electromagnetic radiation across the upper board layer.
+
+---
+
+## 3. Bottom Layer Dual Power Pours (Bottom Copper)
+
+<div align="center">
+  <img src="Images_preview/bottom_pours.png" alt="Bottom Copper Dual Power Pours" width="600" style="border-radius: 8px;" />
+</div>
+
+### 🔋 Power Rail Distribution
+
+| Rail | Coverage Zone | Purpose / Notes |
+| :--- | :--- | :--- |
+| **+5V Plane** | Primary Power Zone | High-current distribution for logic supply and sensors |
+| **-5V Plane** | Isolated Power Zone | Dedicated negative supply rail for analog circuit biased components |
+
+---
+
+<div align="center">
+
+| Layer Count | Copper Weight | Target Impedance | Primary Grounding |
+| :---: | :---: | :---: | :---: |
+| 2-Layer Board | 1 oz Cu | Standard FR4 | Full Top Plane Pour |
+
+</div>
