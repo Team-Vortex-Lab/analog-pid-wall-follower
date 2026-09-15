@@ -69,6 +69,6 @@ This directory contains the complete 3D CAD design files, mechanical assemblies,
 
 | CAD Environment | Primary Material | Sensor Count |
 | :---: | :---: | :---: |
-| SolidWorks / Fusion 360 | FR4 (PCB) + Acrylic + PLA | 4× Distance Sensors |
+| SolidWorks | FR4 (PCB) + Acrylic + PLA | 4× Distance Sensors |
 
 </div>
