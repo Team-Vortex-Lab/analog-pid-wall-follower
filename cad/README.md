@@ -8,14 +8,14 @@
 
 </div>
 
-This directory contains the complete 3D CAD design files, mechanical assemblies, and structural layouts for the Micromouse robot chassis. The design leverages a **PCB-as-chassis** approach, paired with custom 3D-printed mounting brackets and an elevated acrylic backbone for weight optimization, low center of gravity, and modular repairability.
+This directory contains the complete 3D CAD design files, mechanical assemblies, and structural layouts for the Micromouse robot chassis. The design leverages a **PCB-as-chassis** approach, paired with custom 3D-printed mounting brackets and an elevated backbone for weight optimization, low center of gravity, and modular repairability.
 
 ---
 
 ## 1. Chassis Overview (Top & Bottom Views)
 
 <div align="center">
-  <img src="previews/Top%20and%20Bottom%20Views.png" alt="Top and Bottom Views" width="600" style="border-radius: 8px;" />
+  <img src="previews/Top%20and%20Bottom%20views.png" alt="Top and Bottom Views" width="600" style="border-radius: 8px;" />
 </div>
 
 ### 🔍 Key Features
@@ -43,24 +43,24 @@ This directory contains the complete 3D CAD design files, mechanical assemblies,
 
 ---
 
-## 3. Structural Acrylic Backbone & Motor Assembly
+## 3. Structural Assembly (Before Component Placement)
 
 <div align="center">
-  <img src="previews/With%20Acralic.png" alt="With Acrylic Support" width="600" style="border-radius: 8px;" />
+  <img src="previews/Before%20component%20placement.png" alt="Before Component Placement" width="600" style="border-radius: 8px;" />
 </div>
 
 ### 🛡️ Mechanical Layering
-* 🟦 **Elevated Acrylic Plate:** Positioned **5 mm above the primary PCB**, acting as the main rigid structural spine.
-* ⚙️ **Motor Mounting System:** Drive motors mount directly to the acrylic layer, ensuring strict maintenance of the **3 mm ground clearance**.
-* 🔋 **Battery Housing:** The acrylic upper deck provides a stable, isolated mounting surface for the power supply.
+* 🟦 **Elevated Structural Support:** Positioned **5 mm above the primary PCB**, acting as the main rigid structural spine.
+* ⚙️ **Motor Mounting System:** Drive motors mount directly to the structural layer, ensuring strict maintenance of the **3 mm ground clearance**.
+* 🔋 **Battery Housing:** The upper deck provides a stable, isolated mounting surface for the power supply.
 
 ---
 
-## 4. Fully Populated Final Assembly
+## 4. Chassis Elevation & Side Views
 
 <div align="center">
-  <img src="previews/WFinal_assembly.png" alt="Final Assembly View" width="600" style="border-radius: 8px;" />
-  <p><i>Complete 3D CAD view showing the populated PCB, mounted sensors, 3D-printed motor clips, and upper acrylic deck.</i></p>
+  <img src="previews/Side%20views.png" alt="Side Views" width="600" style="border-radius: 8px;" />
+  <p><i>Side profile view highlighting multi-layer clearance, sensor tilt angles, and wheel alignment.</i></p>
 </div>
 
 ---
