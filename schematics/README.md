@@ -21,7 +21,7 @@ This directory contains the layout assets, preview images, and structural PCB de
 ### 🔍 Placement Highlights
 * 🔀 **Routing-Optimized Layout:** Components are strategically aligned to keep signal paths short, minimizing cross-coupling and routing complexity.
 * 🛡️ **Signal Integrity:** Sensitive analog signal paths and high-frequency digital traces are isolated to prevent cross-talk and switching noise interference.
-* 🧩 **Modular Functional Blocks:** Power management, MCU signals, and sensor interfaces are grouped into dedicated functional zones for clear signal flow.
+* 🧩 **Modular Functional Blocks:** Power management, Op-Amp signals, and sensor interfaces are grouped into dedicated functional zones for clear signal flow.
 
 ---
 
