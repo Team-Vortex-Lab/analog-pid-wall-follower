@@ -1,88 +1,98 @@
 <div align="center">
 
-# ⚡ Schematics, PCB Layout & Copper Pour Documentation
+# ⚡ PCB Layout, Copper Pours & Hardware Assembly Documentation
 
-**Optimized Component Placement • Multi-Rail Power Planes • Low-Noise Grounding**
+**Precision Trace Routing • Low-Impedance Ground Plane • Dual-Rail Power Pours • Hardware Verification**
+
+![Layer Count](https://img.shields.io/badge/Layers-2--Layer%20PCB-0078D4?style=for-the-badge)
+![Copper Weight](https://img.shields.io/badge/Copper-1%20oz%20Cu-D97706?style=for-the-badge)
+![Signal Trace](https://img.shields.io/badge/Signal%20Width-0.254%20mm-10B981?style=for-the-badge)
+![Power Rails](https://img.shields.io/badge/Power%20Rails-%2B5V%20%2F%20--5V-8B5CF6?style=for-the-badge)
 
 ---
 
 </div>
 
-This directory contains the schematic design files, layout assets, preview images, and structural PCB design files for the controller board. The design focuses on efficient power regulation, high-current motor driving, signal integrity, minimized trace lengths, and noise isolation across multi-layered copper pours.
+This repository contains the PCB layout assets, copper pour configurations, and physical hardware assembly documentation for the controller board. The board architecture emphasizes controlled trace widths, signal return stability, low-impedance dual-rail power delivery, and clean physical assembly.
 
 ---
 
-## 1. Power Management Architecture
+## 1. Trace Routing & Current-Capacity Design
 
 <div align="center">
-  <img src="Images_preview/Power_management.png" alt="Power Management Circuitry" width="600" style="border-radius: 8px;" />
+  <img src="Images_preview/routing.png" alt="PCB Trace Routing" width="650" style="border-radius: 8px;" />
 </div>
 
-### 🔋 Dual-Rail Power Generation
-* 🔄 **Buck Inverter Topology:** Converts and inverts the primary input voltage to create a dedicated negative voltage rail.
-* ⚡ **Dual Linear Regulators:** Utilizes dedicated positive and negative voltage regulators to provide stable, low-noise supply rails for analog and logic circuitry.
-* 🛡️ **Ripple Suppression:** Decoupling networks ensure continuous, ripple-free power delivery under dynamic load conditions.
+### 🛣️ Routing Strategy
+- 🎯 **0.254 mm Signal Traces:** Standard **0.254 mm (10 mil)** trace widths are utilized across all low-current signal lines, delivering an optimal balance between routing density, manufacturing reliability, and clean signal propagation.
+- ⚡ **High-Capacity Power Traces:** Dedicated power-carrying tracks are routed with significantly wider trace geometries tailored to their specific current demands.
+- 🛡️ **Thermal & Current Safety Margin:** All power trace widths are sized well above their theoretical maximum current limits—incorporating a deliberate safety headroom to prevent resistive voltage drops, localized heating, and thermal stress under peak load.
 
 ---
 
-## 2. Motor Driver & Level Shifting Circuitry
+## 2. Top Layer Ground Pour (Top Copper)
 
 <div align="center">
-  <img src="Images_preview/Motor_driver.png" alt="Motor Driver and Level Shifting Circuit" width="600" style="border-radius: 8px;" />
+  <img src="Images_preview/top_pour.png" alt="Top Layer GND Copper Pour" width="650" style="border-radius: 8px;" />
 </div>
 
-### ⚙️ Drive Control Features
-* 🔀 **MOSFET H-Bridge Driver:** Integrated driver IC provides bidirectional control and high-current driving capacity for the motors.
-* 📈 **Transistor Level Shifting:** Dedicated MOSFET stage level-shifts low-voltage microcontroller logic signals to match the higher operational gate-drive voltages.
-* 🚗 **Inductive Load Protection:** Designed to safely suppress reverse EMF and inductive spikes during fast switching cycles.
+### 🟩 Ground Plane Architecture
+- 🔄 **Continuous GND Return Path:** The top copper layer is flooded with a unified Ground (`GND`) plane, providing the shortest, lowest-impedance return path for high-speed and sensitive analog signals.
+- 📉 **Signal Tail & Reference Stabilization:** By establishing an uninterrupted ground reference beneath and around signal traces, signal ringing, overshoot, and trailing transients are effectively dampened.
+- ⚖️ **Balanced Charge Distribution:** The continuous copper pour promotes uniform electrostatic charge distribution across the entire PCB surface, minimizing ground bounce and electromagnetic interference (EMI).
 
 ---
 
-## 3. Component Placement & Floorplanning
+## 3. Bottom Layer Dual-Rail Power Pours (Bottom Copper)
 
 <div align="center">
-  <img src="Images_preview/Placements.png" alt="Component Placements" width="600" style="border-radius: 8px;" />
+  <img src="Images_preview/bottom_pours.png" alt="Bottom Layer +5V and -5V Power Pours" width="650" style="border-radius: 8px;" />
 </div>
 
-### 🔍 Placement Highlights
-* 🔀 **Routing-Optimized Layout:** Components are strategically aligned to keep signal paths short, minimizing cross-coupling and routing complexity.
-* 🛡️ **Signal Integrity:** Sensitive analog signal paths and high-frequency digital traces are isolated to prevent cross-talk and switching noise interference.
-* 🧩 **Modular Functional Blocks:** Power management, Op-Amp signals, and sensor interfaces are grouped into dedicated functional zones for clear signal flow.
+### 🔋 Split Power Plane Distribution
+Rather than relying on narrow, routed power tracks—which introduce parasitic inductance and resistance—the bottom copper layer is partitioned into dedicated **+5V** and **-5V** copper pours to deliver smooth, low-noise power directly to the operational amplifiers (`Op-Amps`) and active analog stages.
 
----
-
-## 4. Top Layer Ground Pour (Top Copper)
-
-<div align="center">
-  <img src="Images_preview/top_pour.png" alt="Top Copper Ground Pour" width="600" style="border-radius: 8px;" />
-</div>
-
-### ⚡ Top Layer Features
-* 🟩 **Continuous Ground Plane (GND):** Serves as a low-impedance return path for high-speed signals and sensor inputs.
-* 🌡️ **Thermal Management:** Provides high surface area copper pour for efficient heat dissipation from power components and drivers.
-* 📉 **EMI Reduction:** Continuous ground shielding dampens electromagnetic radiation across the upper board layer.
-
----
-
-## 5. Bottom Layer Dual Power Pours (Bottom Copper)
-
-<div align="center">
-  <img src="Images_preview/bottom_pours.png" alt="Bottom Copper Dual Power Pours" width="600" style="border-radius: 8px;" />
-</div>
-
-### 🔋 Power Rail Distribution
-
-| Rail | Coverage Zone | Purpose / Notes |
+| Power Rail | Copper Zone | Primary Function & Design Advantage |
 | :--- | :--- | :--- |
-| **+5V Plane** | Primary Power Zone | High-current distribution for logic supply and sensors |
-| **-5V Plane** | Isolated Power Zone | Dedicated negative supply rail for analog circuit biased components |
+| **+5V Pour** | Positive Supply Zone | Delivers smooth, low-impedance positive bias power to Op-Amps, logic, and sensor interfaces |
+| **-5V Pour** | Negative Supply Zone | Provides an isolated, ripple-free negative supply plane for symmetric dual-rail Op-Amp operation |
+
+---
+
+## 4. Bare PCB Inspection (Pre-Assembly)
+
+<div align="center">
+  <img src="Images_preview/before_soldering.png" alt="Original Unpopulated PCB Before Soldering" width="650" style="border-radius: 8px;" />
+</div>
+
+### 🔍 Fabricated Board Verification
+- ✨ **Bare Board Quality:** View of the freshly fabricated, unpopulated PCB prior to component placement and soldering.
+- 🧩 **Pad & Soldermask Integrity:** Confirms clean copper pad finishes, accurate silkscreen component designators, crisp soldermask clearances, and verified continuity across the top and bottom copper pours before assembly.
+
+---
+
+## 5. Assembled Hardware (Post-Soldering)
+
+<div align="center">
+  <img src="Images_preview/after_soldering.png" alt="Fully Assembled PCB After Soldering" width="650" style="border-radius: 8px;" />
+</div>
+
+### 🛠️ Completed Board Assembly
+- 🔧 **Component Population:** Fully populated controller board with all surface-mount and through-hole components soldered in place.
+- ✅ **Joint & Thermal Inspection:** Verified clean solder fillets, proper component orientation, and reliable mechanical/electrical connections across power rails, Op-Amp stages, and I/O headers.
 
 ---
 
 <div align="center">
 
-| Layer Count | Copper Weight | Target Impedance | Primary Grounding |
-| :---: | :---: | :---: | :---: |
-| 2-Layer Board | 1 oz Cu | Standard FR4 | Full Top Plane Pour |
+### 📋 PCB Design Specifications Summary
+
+| Parameter | Specification | Design Purpose |
+| :---: | :---: | :---: |
+| **Board Stackup** | 2-Layer FR4 (1 oz Cu) | Cost-effective, robust double-sided layout |
+| **Signal Trace Width** | 0.254 mm (10 mil) | Reliable high-density signal routing |
+| **Power Trace Sizing** | Over-spec'd with safety margin | Prevents thermal rise & voltage drop under load |
+| **Top Layer Copper** | Full `GND` Pour | Signal stabilization, EMI shielding & uniform charge flow |
+| **Bottom Layer Copper** | Split `+5V` / `-5V` Pours | Low-impedance, smooth dual-rail power for Op-Amps |
 
 </div>
