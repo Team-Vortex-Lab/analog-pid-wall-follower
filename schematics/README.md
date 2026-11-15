@@ -20,7 +20,7 @@ This repository contains the PCB layout assets, copper pour configurations, and 
 ## 1. Trace Routing & Current-Capacity Design
 
 <div align="center">
-  <img src="Images_preview/routing.png" alt="PCB Trace Routing" width="650" style="border-radius: 8px;" />
+  <img src="Images_preview/routings.png" alt="PCB Trace Routing" width="420" style="border-radius: 8px;" />
 </div>
 
 ### 🛣️ Routing Strategy
@@ -33,7 +33,7 @@ This repository contains the PCB layout assets, copper pour configurations, and 
 ## 2. Top Layer Ground Pour (Top Copper)
 
 <div align="center">
-  <img src="Images_preview/top_pour.png" alt="Top Layer GND Copper Pour" width="650" style="border-radius: 8px;" />
+  <img src="Images_preview/top_pour.png" alt="Top Layer GND Copper Pour" width="420" style="border-radius: 8px;" />
 </div>
 
 ### 🟩 Ground Plane Architecture
@@ -46,7 +46,7 @@ This repository contains the PCB layout assets, copper pour configurations, and 
 ## 3. Bottom Layer Dual-Rail Power Pours (Bottom Copper)
 
 <div align="center">
-  <img src="Images_preview/bottom_pours.png" alt="Bottom Layer +5V and -5V Power Pours" width="650" style="border-radius: 8px;" />
+  <img src="Images_preview/bottom_pour.png" alt="Bottom Layer +5V and -5V Power Pours" width="420" style="border-radius: 8px;" />
 </div>
 
 ### 🔋 Split Power Plane Distribution
@@ -62,7 +62,7 @@ Rather than relying on narrow, routed power tracks—which introduce parasitic i
 ## 4. Bare PCB Inspection (Pre-Assembly)
 
 <div align="center">
-  <img src="Images_preview/before_soldering.png" alt="Original Unpopulated PCB Before Soldering" width="650" style="border-radius: 8px;" />
+  <img src="Images_preview/before_soldering.jpeg" alt="Original Unpopulated PCB Before Soldering" width="420" style="border-radius: 8px;" />
 </div>
 
 ### 🔍 Fabricated Board Verification
@@ -74,7 +74,7 @@ Rather than relying on narrow, routed power tracks—which introduce parasitic i
 ## 5. Assembled Hardware (Post-Soldering)
 
 <div align="center">
-  <img src="Images_preview/after_soldering.png" alt="Fully Assembled PCB After Soldering" width="650" style="border-radius: 8px;" />
+  <img src="Images_preview/after_soldering.jpeg" alt="Fully Assembled PCB After Soldering" width="420" style="border-radius: 8px;" />
 </div>
 
 ### 🛠️ Completed Board Assembly
