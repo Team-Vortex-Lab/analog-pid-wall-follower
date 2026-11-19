@@ -46,11 +46,11 @@ $$u(t) = K_{\text{postmul}} \left[ K_p \, \Delta E(t) + K_i \int_0^t \Delta E(\t
 
 - 🔀 **Differential Speed Mixing:** Scales the base speed by $K_{\text{base}}$, applies an offset $u_{\text{offset}}$ to the steering signal $u(t)$, and adds/subtracts the resulting steering term across the left and right wheel channels:
 
-$$V_{\text{left}} = K_{\text{base}}\,V_{\text{base}} - \bigl(u(t) + u_{\text{offset}}\bigr), \qquad V_{\text{right}} = K_{\text{base}}\,V_{\text{base}} + \bigl(u(t) + u_{\text{offset}}\bigr)$$
+$$V_{\text{left}} = (K_{\text{base}} \times V_{\text{base}}) - \bigl(u(t) + u_{\text{offset}}\bigr), \qquad V_{\text{right}} = (K_{\text{base}} \times V_{\text{base}}) + \bigl(u(t) + u_{\text{offset}}\bigr)$$
 
 *(Sign convention follows your circuit/steering polarity—flipping $\pm$ reverses left/right steering bias.)*
 
-- ⚙️ **Adjustable Speed & Offset:** Both $K_{\text{base}}\,V_{\text{base}}$ and $u_{\text{offset}}$ can be tuned to set nominal forward drive speed and compensate for steering/channel bias.
+- ⚙️ **Adjustable Speed & Offset:** Both $K_{\text{base}} \times V_{\text{base}}$ and $u_{\text{offset}}$ can be tuned to set nominal forward drive speed and compensate for steering/channel bias.
 
 ---
 
@@ -80,7 +80,7 @@ $$V_{\text{left}} = K_{\text{base}}\,V_{\text{base}} - \bigl(u(t) + u_{\text{off
   <img src="Preview/centre_position.png" alt="PWM Output at Centered Position" width="600" style="border-radius: 8px;" />
 </div>
 
-- 🟩 **Balanced Drive Output:** When $\Delta E \approx 0$, $u(t) \approx 0$, and $u_{\text{offset}} = 0$, both channels track the scaled base speed voltage ($V_{\text{left}} \approx V_{\text{right}} \approx K_{\text{base}} V_{\text{base}}$), producing matched PWM duty cycles for straight-line motion.
+- 🟩 **Balanced Drive Output:** When $\Delta E \approx 0$, $u(t) \approx 0$, and $u_{\text{offset}} = 0$, both channels track the scaled base speed voltage ($V_{\text{left}} \approx V_{\text{right}} \approx K_{\text{base}} \times V_{\text{base}}$), producing matched PWM duty cycles for straight-line motion.
 
 ---
 
