@@ -44,13 +44,13 @@ $$u(t) = K_{\text{postmul}} \left[ K_p \, \Delta E(t) + K_i \int_0^t \Delta E(\t
   <img src="Preview/Differential_Drive_Mixer.png" alt="Differential Drive Mixer Block" width="600" style="border-radius: 8px;" />
 </div>
 
-- 🔀 **Differential Speed Mixing:** Takes the steering control signal $u(t)$ and adds it to one wheel while subtracting it from the other around a configurable nominal/base speed command ($V_{\text{base}}$):
+- 🔀 **Differential Speed Mixing:** Scales the base speed by $K_{\text{base}}$, applies an offset $u_{\text{offset}}$ to the steering signal $u(t)$, and adds/subtracts the resulting steering term across the left and right wheel channels:
 
-$$V_{\text{left}} = V_{\text{base}} - u(t), \qquad V_{\text{right}} = V_{\text{base}} + u(t)$$
+$$V_{\text{left}} = K_{\text{base}}\,V_{\text{base}} - \bigl(u(t) + u_{\text{offset}}\bigr), \qquad V_{\text{right}} = K_{\text{base}}\,V_{\text{base}} + \bigl(u(t) + u_{\text{offset}}\bigr)$$
 
-*(Sign convention follows your circuit/steering polarity—flipping $\pm u(t)$ reverses left/right steering bias.)*
+*(Sign convention follows your circuit/steering polarity—flipping $\pm$ reverses left/right steering bias.)*
 
-- ⚙️ **Adjustable Base Speed:** $V_{\text{base}}$ can be tuned independently to set overall cruising speed without altering the differential split behavior.
+- ⚙️ **Adjustable Speed & Offset:** Both $K_{\text{base}}\,V_{\text{base}}$ and $u_{\text{offset}}$ can be tuned to set nominal forward drive speed and compensate for steering/channel bias.
 
 ---
 
@@ -80,7 +80,7 @@ $$V_{\text{left}} = V_{\text{base}} - u(t), \qquad V_{\text{right}} = V_{\text{b
   <img src="Preview/centre_position.png" alt="PWM Output at Centered Position" width="600" style="border-radius: 8px;" />
 </div>
 
-- 🟩 **Balanced Drive Output:** With $\Delta E \approx 0$ and $u(t) \approx 0$, both channels track the base speed voltage ($V_{\text{left}} \approx V_{\text{right}} \approx V_{\text{base}}$), producing matched PWM duty cycles for straight-line motion.
+- 🟩 **Balanced Drive Output:** When $\Delta E \approx 0$, $u(t) \approx 0$, and $u_{\text{offset}} = 0$, both channels track the scaled base speed voltage ($V_{\text{left}} \approx V_{\text{right}} \approx K_{\text{base}} V_{\text{base}}$), producing matched PWM duty cycles for straight-line motion.
 
 ---
 
@@ -89,7 +89,7 @@ $$V_{\text{left}} = V_{\text{base}} - u(t), \qquad V_{\text{right}} = V_{\text{b
   <img src="Preview/sided_position.png" alt="PWM Output at Offset Position" width="600" style="border-radius: 8px;" />
 </div>
 
-- 🟧 **Differential Steering Adjustment:** When $\Delta E \neq 0$, the mixer shifts one wheel voltage up and the other down by $u(t)$, updating the corresponding PWM duty cycles to steer the Micromouse back toward the corridor center.
+- 🟧 **Differential Steering Adjustment:** When $\Delta E \neq 0$, the mixer shifts one wheel voltage up and the other down by $\bigl(u(t) + u_{\text{offset}}\bigr)$, updating the corresponding PWM duty cycles to steer the Micromouse back toward the corridor center.
 
 ---
 
