@@ -53,5 +53,17 @@ Calculated PID control voltages are mapped to a high-efficiency solid-state MOSF
 ├── simulation/           # LTspice circuit simulation models (.asc)
 ├── cad/                  # SolidWorks chassis files (.SLDPRT, .SLDASM, STEP)
 ├── bom/                  # Component Bill of Materials & sourcing specs
+├── images/               # Team & project images
 ├── .gitignore            # Hardware/EDA temp file filters
 └── README.md             # Project documentation
+```
+
+---
+
+## 👥 Team Vortex
+
+<p align="center">
+  <img src="images/team-vortex.jpg" width="600"><br>
+  <em>Team Vortex: Samaranayaka D.M.K.I., Didulanga M.I., Diniru G.A.A., Dewmina K.U. (left to right)</em>
+</p>
+
