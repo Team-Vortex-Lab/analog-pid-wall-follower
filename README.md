@@ -64,6 +64,6 @@ Calculated PID control voltages are mapped to a high-efficiency solid-state MOSF
 
 <p align="center">
   <img src="images/team-vortex.jpg" width="600"><br>
-  <em>Team Vortex: Samaranayaka D.M.K.I., Didulanga M.I., Diniru G.A.A., Dewmina K.U. (left to right)</em>
+  <em>Team Vortex: Samaranayaka D.M.K.I.| Didulanga M.I.| Diniru G.A.A.| Dewmina K.U. (left to right)</em>
 </p>
 
