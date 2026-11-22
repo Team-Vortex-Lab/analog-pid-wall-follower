@@ -73,6 +73,22 @@ This directory contains the complete 3D CAD design files, mechanical assemblies,
 
 ---
 
+## 5. Final Assembled Robot (Physical Prototype)
+
+<p align="center">
+  <img src="previews/final_assembly_top.jpg" alt="Final Assembled Robot - Top View" width="340" />
+  &nbsp;&nbsp;
+  <img src="previews/final_assembly_maze.jpg" alt="Final Assembled Robot - Maze Cell Fit" width="340" /><br>
+  <em>Final Assembled Team Vortex Analog PID Robot — Top-Down Hardware Integration (left) &amp; Standard Maze Cell Clearance Verification (right)</em>
+</p>
+
+### 🤖 Hardware Integration & Real-World Validation
+- 🟩 **Complete PCB-to-Chassis Realization:** Confirms accurate mechanical alignment between the SolidWorks CAD model and the fabricated custom **Team Vortex** FR4 PCB chassis, 3D-printed PLA bumper, and mounting hardware.
+- 🎯 **4× Sharp IR Sensor Array & PID Tuning Access:** All four optical distance sensors are rigidly seated in custom 3D-printed brackets with clean wire routing, while both banks of multi-turn trimpots (`W104`) remain easily accessible for live analog PID gain tuning.
+- 🔋 **Centralized Power & Drivetrain Packaging:** The **7.4 V 650 mAh LiPo** battery pack sits securely along the chassis centerline between the dual N20 gearmotors and 34 mm treaded wheels, maintaining balanced mass distribution and ample turning clearance inside the maze corridor.
+
+---
+
 <div align="center">
 
 ### 📋 Mechanical & CAD Specifications Summary
@@ -83,4 +99,7 @@ This directory contains the complete 3D CAD design files, mechanical assemblies,
 | **Chassis Materials** | FR4 (PCB) + Acrylic + PLA | Lightweight, rigid hybrid structural construction |
 | **Overall Dimensions** | 90 mm × 110 mm | Optimized footprint for standard maze cells |
 | **Ground Clearance** | 3 mm | Maximizes stability and lowers center of gravity |
-| **Sensor Configuration** | 4× Distance Sensors | Dual front + dual 15°-offset side array for
+| **Sensor Configuration** | 4× Distance Sensors | Dual front + dual 15°-offset side array for continuous wall tracking |
+
+</div>
+
